@@ -44,9 +44,9 @@ const Khoa = () => {
 
             if (status === "EDIT") {
 
-                const data = { id: idKhoa, content: contentKhoa }
-                dispatch(updateKhoa(data))
-                toast.success("Sửa thành công...!!!")
+                // const data = { id: idKhoa, content: contentKhoa }
+                // dispatch(updateKhoa(data))
+                // toast.success("Sửa thành công...!!!")
             }
 
             setContentKhoa("")
