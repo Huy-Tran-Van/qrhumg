@@ -19,8 +19,8 @@ const Detail = ({ dataNew }) => {
     <>
       <SEO
         title={dataNew?.attributes?.Title}
-        urlKey={`http://localhost:3030/InfrastructureDetail/${dataNew?.attributes?.slug}`}
-        image={`http://localhost:1337/${dataNew?.attributes?.image?.data[0].attributes?.url}`}
+        urlKey={`${hostname}/InfrastructureDetail/${dataNew?.attributes?.slug}`}
+        // image={`http://localhost:1337/${dataNew?.attributes?.image?.data[0].attributes?.url}`}
         content={dataNew.attributes.Content ?? 'Drivadz'}
       // keyword={data?.keyword ?? 'Drivadz'}
       />
