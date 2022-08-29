@@ -20,7 +20,7 @@ import { useState } from "react";
 import DangNhap from "../dang-nhap";
 import FilterKhoa from "./TrangChu/FilterKhoa";
 import Video from "./TrangChu/Video";
-import { Banner } from "./CauHinh/Banner";
+import Banner from "./CauHinh/Banner";
 
 
 const Query = ({ dataTaiKhoan }) => {

@@ -3,10 +3,10 @@ import Banner from "../../components/Banner";
 import Menu from "../../components/Menu";
 import InfoDetail from "./InfoDetail";
 import axios from "axios"
-import { StyledInfratructureDetail } from "./styled";
 import { LOCALHOST_URL_API_STRAPI } from "../../ultis";
 import SEO from "../SEO/seo";
 import { useRouter } from 'next/router'
+import StyledInfratructureDetail from "./styled";
 
 const Detail = ({ dataNew }) => {
   const router = useRouter()
