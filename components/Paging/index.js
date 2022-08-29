@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { getAllCamKetTuyenDung } from "../../redux/CamKetTuyenDung/action";
 import { getAllKhoa } from "../../redux/Khoa/action";
 import { getAllSinhVienTuyenDung } from "../../redux/SinhVienThucHien/action";
-import { StyledPaging } from "./styled";
+import  StyledPaging  from "./styled";
 
 const Paging = ({ countData, maxPage, type }) => {
       const [page, setPage] = useState(1)

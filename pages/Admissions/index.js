@@ -3,7 +3,7 @@ import Banner from "../../components/Banner";
 import Menu from "../../components/Menu";
 import Detail from "./Detail";
 import Form from "./Form";
-import { StyledAdmission } from "./styled";
+import  StyledAdmission  from "./styled";
 
 const Admissions = () => {
   return (

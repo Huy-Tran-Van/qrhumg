@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MenuPage = {
+const MenuPage = {
   Menu: styled.div`
     display: flex;
     align-items: center;
@@ -33,3 +33,5 @@ export const MenuPage = {
     }
   `,
 };
+
+export default MenuPage;

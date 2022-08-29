@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { getAllVideo } from "../../../redux/Video/action";
-import { StyledVideo } from "./styled";
+import StyledVideo from "./styled";
 
 const Video = () => {
   const video = [

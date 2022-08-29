@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { LOCALHOST_URL_API } from "../../../ultis";
-import { StyledForm } from "./styled";
+import StyledForm from "./styled";
 import { ToastContainer, toast } from 'react-toastify';
 import { getAllKhoa } from "../../../redux/Khoa/action";
 import { useSelector } from "react-redux";

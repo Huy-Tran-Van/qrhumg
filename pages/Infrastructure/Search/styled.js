@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledSearch = {
+const StyledSearch = {
   WrapperSearch: styled.div`
     display: flex;
     align-items: center;

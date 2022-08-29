@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { StyledDetail } from "./styled";
+import StyledDetail from "./styled";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";

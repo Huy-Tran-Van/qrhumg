@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BannerPage = {
+ const BannerPage = {
   Banner: styled.div`
     width: 100%;
     height: 400px;
@@ -25,3 +25,4 @@ export const BannerPage = {
     }
   `,
 };
+export default BannerPage;

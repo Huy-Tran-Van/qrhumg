@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StyledNews } from "./styled";
+import StyledNews from "./styled";
 import {
   AiOutlineCalendar,
   AiOutlineEye,

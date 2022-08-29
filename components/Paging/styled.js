@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledPaging = {
+const StyledPaging = {
   WrapperPaing: styled.div`
     display: flex;
     justify-content: end;
@@ -46,3 +46,5 @@ export const StyledPaging = {
     font-size: 12px;
   `,
 };
+
+export default StyledPaging;
