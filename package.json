@@ -8,10 +8,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "engines": {
-    "node": "16.14.2",
-    "npm": "8.5.0"
-  },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "antd": "^4.22.8",
