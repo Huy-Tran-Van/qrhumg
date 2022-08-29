@@ -3,13 +3,13 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { LOCALHOST_URL_API } from "../../../ultis";
-import StyledForm from "./styled";
 import { ToastContainer, toast } from 'react-toastify';
 import { getAllKhoa } from "../../../redux/Khoa/action";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { getAllViTriUngTuyen } from "../../../redux/ViTriUngTuyen/action";
 import { getAllHinhThucUngTuyen } from "../../../redux/HinhThucUngTuyen/action";
+import StyledForm from "../../../components/Admissions/Form/styled";
 
 const Form = () => {
 
