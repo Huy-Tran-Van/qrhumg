@@ -6,7 +6,7 @@ import axios from "axios"
 import { LOCALHOST_URL_API_STRAPI } from "../../ultis";
 import SEO from "../SEO/seo";
 import { useRouter } from 'next/router'
-import StyledInfratructureDetail from "./styled";
+import StyledInfratructureDetail from "../../components/InfrastructureDetail/styled";
 
 const Detail = ({ dataNew }) => {
   const router = useRouter()

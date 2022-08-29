@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllKhoa, getKhoaFilter } from "../../../redux/Khoa/action";
 import { LOCALHOST_URL_API } from "../../../ultis";
-import  StyledDepartment  from "./styled";
+import  StyledDepartment  from "../../../components/Home/Department/styled";
 import ReactPlayer from "react-player";
 import Loading from "../../../components/Loadding";
 

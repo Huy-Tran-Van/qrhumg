@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import  StyledIntrastructure  from "./styled";
+import  StyledIntrastructure  from "../../../components/Home/Infrastructure/styled";
 import Slider from "react-slick";
 
 const Intrastructure = () => {

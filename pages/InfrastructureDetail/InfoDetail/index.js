@@ -1,5 +1,5 @@
 import React from "react";
-import StyledInfoDetail from "./styled";
+import StyledInfoDetail from "../../../components/InfrastructureDetail/InfoDetail/styled";
 import { BsHeart } from "react-icons/bs";
 import ReactMarkdown from "react-markdown";
 
