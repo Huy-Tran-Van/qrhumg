@@ -17,17 +17,16 @@ const TaiKhoan = ({ dataTaiKhoan }) => {
     const [diaChi, setDiaChi] = useState()
     const [soDienThoai, setSoDienThoai] = useState()
 
-    console.log("taikohan", dataTaiKhoan);
     const dispatch = useDispatch()
 
     useEffect(() => {
         if (dataTaiKhoan) {
-            setHoVaTen(dataTaiKhoan.hoVaTen)
-            setAvatar(dataTaiKhoan.avatar)
-            setNgaySinh(dataTaiKhoan.ngaySinh)
-            setDiaChi(dataTaiKhoan.diaChi)
-            setSoDienThoai(dataTaiKhoan.soDT)
-            setGioiTinh(dataTaiKhoan.gioiTinh)
+            setHoVaTen(dataTaiKhoan?.hoVaTen)
+            setAvatar(dataTaiKhoan?.avatar)
+            setNgaySinh(dataTaiKhoan?.ngaySinh)
+            setDiaChi(dataTaiKhoan?.diaChi)
+            setSoDienThoai(dataTaiKhoan?.soDT)
+            setGioiTinh(dataTaiKhoan?.gioiTinh)
         }
     }, [dataTaiKhoan])
     const onSubmitEditAvatar = async (e) => {
@@ -42,7 +41,7 @@ const TaiKhoan = ({ dataTaiKhoan }) => {
         if (res) {
             setAvatar(res.data.name)
             const data = { avatar: res.data.name }
-            axios.put(`${LOCALHOST_URL_API}/tai-khoan-avatar/${dataTaiKhoan.Id}`, data)
+            axios.put(`${LOCALHOST_URL_API}/tai-khoan-avatar/${dataTaiKhoan?.Id}`, data)
         }
 
     }
@@ -60,12 +59,12 @@ const TaiKhoan = ({ dataTaiKhoan }) => {
 
     const onSubmitCanle = () => {
 
-        setHoVaTen(dataTaiKhoan.hoVaTen)
-        setAvatar(dataTaiKhoan.avatar)
-        setNgaySinh(dataTaiKhoan.ngaySinh)
-        setDiaChi(dataTaiKhoan.diaChi)
-        setSoDienThoai(dataTaiKhoan.soDT)
-        setGioiTinh(dataTaiKhoan.gioiTinh)
+        setHoVaTen(dataTaiKhoan?.hoVaTen)
+        setAvatar(dataTaiKhoan?.avatar)
+        setNgaySinh(dataTaiKhoan?.ngaySinh)
+        setDiaChi(dataTaiKhoan?.diaChi)
+        setSoDienThoai(dataTaiKhoan?.soDT)
+        setGioiTinh(dataTaiKhoan?.gioiTinh)
     }
 
     return (
@@ -84,11 +83,11 @@ const TaiKhoan = ({ dataTaiKhoan }) => {
             <ContainerInfo>
                 <ContentInput>
                     <Title>Loại tài khoản</Title>
-                    <Input type="text" value={dataTaiKhoan.roleUser} />
+                    <Input type="text" value={dataTaiKhoan?.roleUser} />
                 </ContentInput>
                 <ContentInput>
                     <Title>Email</Title>
-                    <Input type="text" value={dataTaiKhoan.taiKhoan} />
+                    <Input type="text" value={dataTaiKhoan?.taiKhoan} />
                 </ContentInput>
                 <ContentInput>
                     <Title>Họ và tên</Title>
@@ -111,7 +110,7 @@ const TaiKhoan = ({ dataTaiKhoan }) => {
                     <Input type="number" value={soDienThoai} onChange={(e) => setSoDienThoai(e.target.value)} maxLength={5} />
                 </ContentInput>
                 <ContentInput className="update">
-                    <Button variant="info" onClick={() => onSubmitSave(dataTaiKhoan.Id)}>CẬP NHẬT</Button>
+                    <Button variant="info" onClick={() => onSubmitSave(dataTaiKhoan?.Id)}>CẬP NHẬT</Button>
                     <Button variant="secondary" onClick={() => onSubmitCanle("")}>HỦY</Button>
                 </ContentInput>
 
