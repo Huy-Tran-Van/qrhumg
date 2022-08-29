@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledNews = {
+const StyledNews = {
   WrapperNews: styled.div`
     display: flex;
     justify-content: space-between;
@@ -77,3 +77,4 @@ export const StyledNews = {
     }
   `,
 };
+export default StyledNews;

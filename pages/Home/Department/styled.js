@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledDepartment = {
+const StyledDepartment = {
   WrapperView: styled.div`
     margin-bottom: 45px;
   `,
@@ -105,3 +105,5 @@ export const StyledDepartment = {
     text-align: center;
   `
 };
+
+export default StyledDepartment;

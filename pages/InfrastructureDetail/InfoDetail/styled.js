@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledInfoDetail = {
+const StyledInfoDetail = {
   WrapperInfoDetal: styled.div`
     display: flex;
     justify-content: center;
@@ -57,3 +57,5 @@ export const StyledInfoDetail = {
     width: 90px;
   `,
 };
+
+export default StyledInfoDetail;

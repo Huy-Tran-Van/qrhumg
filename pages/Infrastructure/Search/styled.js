@@ -51,3 +51,5 @@ export const StyledSearch = {
     color: #606060;
   `,
 };
+
+export default StyledSearch;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledDetail = {
+const StyledDetail = {
   WrapperDetail: styled.div``,
   WrapperTitle: styled.div`
     margin-bottom: 64px;
@@ -91,4 +91,6 @@ export const StyledDetail = {
   WrapperWelfare: styled.div`
     box-shadow: 0px 4px 25px 0px #3707000d;
   `,
-};
+}
+
+export default StyledDetail;

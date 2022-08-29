@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledIntrastructure = {
+const StyledIntrastructure = {
   WrapperInTrastucture: styled.div`
     padding: 0 135px;
     text-align: center;
@@ -63,3 +63,4 @@ export const StyledIntrastructure = {
     display: none;
   `,
 };
+export default StyledIntrastructure;

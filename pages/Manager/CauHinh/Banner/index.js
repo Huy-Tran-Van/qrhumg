@@ -3,7 +3,7 @@ import { ContainerManager } from "../../../../components/Styled/style"
 import TableBanner from "./Component/Table"
 import UploadBanner from "./Component/UploadBanner"
 
-export const Banner = () => {
+const Banner = () => {
     const [dataBannerContainer, setDataBannerContainer] = useState([])
 
     return (
@@ -14,3 +14,5 @@ export const Banner = () => {
         </ContainerManager>
     )
 }
+
+export default Banner

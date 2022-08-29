@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledVideo = {
+const StyledVideo = {
   WrapperVideo: styled.div`
     padding: 0 135px;
     display: flex;
@@ -13,3 +13,5 @@ export const StyledVideo = {
       width: 33.33px;
   `
 };
+
+export default StyledVideo;

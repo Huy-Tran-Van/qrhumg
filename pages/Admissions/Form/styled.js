@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledForm = {
+const StyledForm = {
   WrapperForm: styled.div`
     /* padding: 0 555px; */
     display: flex;
@@ -123,3 +123,5 @@ export const StyledForm = {
     padding: 20px 0px 16px 16px;
   `,
 };
+
+export default StyledForm;
