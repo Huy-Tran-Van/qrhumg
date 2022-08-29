@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
   eslint: {
     ignoreDuringBuilds: true,
   },
