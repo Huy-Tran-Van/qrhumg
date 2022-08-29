@@ -61,23 +61,23 @@ export const deleteUngTuyenNgayFail = (data) => ({
 
 // // Cập nhật dữ liệu
 
-export const updateUngTuyenNgay = (data) => ({
+// export const updateUngTuyenNgay = (data) => ({
 
-    type: types.UPDATE_UNG_TUYEN_NGAY,
-    payload: data
-})
+//     type: types.UPDATE_UNG_TUYEN_NGAY,
+//     payload: data
+// })
 
-export const updateUngTuyenNgaySuccess = (data) => ({
+// export const updateUngTuyenNgaySuccess = (data) => ({
 
-    type: types.UPDATE_UNG_TUYEN_NGAY_SUCCESS,
-    payload: data
-})
+//     type: types.UPDATE_UNG_TUYEN_NGAY_SUCCESS,
+//     payload: data
+// })
 
-export const updateUngTuyenNgayFail = (data) => ({
+// export const updateUngTuyenNgayFail = (data) => ({
 
-    type: types.UPDATE_UNG_TUYEN_NGAY_FAIL,
-    payload: data
-})
+//     type: types.UPDATE_UNG_TUYEN_NGAY_FAIL,
+//     payload: data
+// })
 
 // // Tìm nội dung dữ liệu
 

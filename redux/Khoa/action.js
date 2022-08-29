@@ -60,23 +60,23 @@ export const deleteKhoaFail = (data) => ({
 
 // // Cập nhật dữ liệu
 
-export const updateKhoa = (data) => ({
+// export const updateKhoa = (data) => ({
 
-    type: types.UPDATE_KHOA,
-    payload: data
-})
+//     type: types.UPDATE_KHOA,
+//     payload: data
+// })
 
-export const updateKhoaSuccess = (data) => ({
+// export const updateKhoaSuccess = (data) => ({
 
-    type: types.UPDATE,
-    payload: data
-})
+//     type: types.UPDATE,
+//     payload: data
+// })
 
-export const updateKhoaFail = (data) => ({
+// export const updateKhoaFail = (data) => ({
 
-    type: types.UPDATE_KHOA_FAIL,
-    payload: data
-})
+//     type: types.UPDATE_KHOA_FAIL,
+//     payload: data
+// })
 
 // // Tìm nội dung dữ liệu
 
