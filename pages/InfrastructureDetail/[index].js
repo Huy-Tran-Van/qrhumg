@@ -9,12 +9,6 @@ import { useRouter } from 'next/router'
 import StyledInfratructureDetail from "../../components/InfrastructureDetail/styled";
 
 const Detail = ({ dataNew }) => {
-  // const router = useRouter()
-  // console.log("router", router);
-  // if (typeof window !== 'undefined') {
-  //   var hostname = window.location.host;
-  //   console.log("hostname", hostname);
-  // }
   return (
     <>
       <SEO
@@ -39,7 +33,6 @@ export default Detail;
 export async function getServerSideProps(context) {
   const params = context.query.index;
   const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
-  console.log("dataNew", res.data.data);
   return {
     props: { dataNew: res.data.data[0] }, // will be passed to the page component as props
   };
