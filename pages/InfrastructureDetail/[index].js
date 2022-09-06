@@ -21,7 +21,7 @@ const Detail = ({ dataNew }) => {
         title={dataNew?.attributes?.Title}
         // urlKey={`${hostname}/InfrastructureDetail/${dataNew?.attributes?.slug}`}
         image={`${LOCALHOST_URL_API_STRAPI}/${dataNew?.attributes?.image?.data[0].attributes?.url}`}
-        content={dataNew?.attributes?.Content ?? 'humgqr'}
+        content={dataNew?.attributes?.Content ?? 'humg-qr'}
       // keyword={data?.keyword ?? ''}
       />
       <Banner />
