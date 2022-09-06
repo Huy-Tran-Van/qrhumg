@@ -44,19 +44,12 @@ export default Detail;
 
 
 export async function getServerSideProps(context) {
-  console.log("context", context);
   const params = context.params.detail;
   const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
-  if (res) {
+  
     return {
       // props : {}
       props: { dataNew: res.data.data[0] }, // will be passed to the page component as props
     };
-  } else {
-    return {
-      props: {}
-      // props: { dataNew: res.data.data[0] }, // will be passed to the page component as props
-    };
-  }
-
+  
 }
