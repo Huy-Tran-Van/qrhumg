@@ -1,8 +1,8 @@
 import React from "react";
-import StyledInfoDetail from "../../../components/InfrastructureDetail/InfoDetail/styled";
+import StyledInfoDetail from "../../components/InfrastructureDetail/InfoDetail/styled";
 import { BsHeart } from "react-icons/bs";
 import ReactMarkdown from "react-markdown";
-import Share from "../../Component/Share";
+import Share from "../Component/Share";
 
 const InfoLeft = ({ dataNew }) => {
   return (
