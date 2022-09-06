@@ -46,10 +46,10 @@ export default Detail;
 
 
 export async function getServerSideProps(context) {
-  console.log("context", context);
-  const params = context.params.detail;
+  // console.log("context", context);
+  // const params = context.params.detail;
   // console.log("paramsparamsparams", params);
-  const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
+  // const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
   const data = [{
     id: "1",
     content: "<h1>aaaaaaaaa</h1>"
