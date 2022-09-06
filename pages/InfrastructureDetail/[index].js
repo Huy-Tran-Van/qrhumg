@@ -41,6 +41,6 @@ export async function getServerSideProps(context) {
   const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
   console.log("dataNew", res.data.data);
   return {
-    props: { dataNew: res.data.data[0] }, // will be passed to the page component as props
+    props: { dataNew: res.data.data[0]}, // will be passed to the page component as props
   };
 }
