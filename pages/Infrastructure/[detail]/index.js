@@ -13,18 +13,20 @@ const Detail = ({ dataNew }) => {
     <>
       <Banner />
       <Menu />
-      {dataNew ? <><SEO
-        title={dataNew?.attributes?.Title}
-        urlKey={`${URL_SERVER_WEB}/InfrastructureDetail/${dataNew?.attributes?.slug}`}
-        image={`${LOCALHOST_URL_API_STRAPI}/${dataNew?.attributes?.image?.data[0].attributes?.url}`}
-        content={dataNew?.attributes?.Content ?? 'humgqr'}
-      // keyword={data?.keyword ?? ''}
-      />
+      {dataNew ? <>
+        {/* <SEO
+          title={dataNew?.attributes?.Title}
+          urlKey={`${URL_SERVER_WEB}/InfrastructureDetail/${dataNew?.attributes?.slug}`}
+          image={`${LOCALHOST_URL_API_STRAPI}/${dataNew?.attributes?.image?.data[0].attributes?.url}`}
+          content={dataNew?.attributes?.Content ?? 'humgqr'}
+        // keyword={data?.keyword ?? ''}
+        />
 
         <StyledInfratructureDetail.WrapperDetail>
           <InfoDetail dataNew={dataNew} />
-        </StyledInfratructureDetail.WrapperDetail>
-        {/* <div>huy</div> */}</> : null}
+        </StyledInfratructureDetail.WrapperDetail> */}
+        <div>huy</div>
+      </> : null}
 
     </>
   );
@@ -48,10 +50,14 @@ export async function getServerSideProps(context) {
   const params = context.params.detail;
   // console.log("paramsparamsparams", params);
   const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
+  const data = [{
+    id: "1",
+    content: "<h1>aaaaaaaaa</h1>"
+  }]
   if (res) {
     return {
       // props : {}
-      props: { dataNew: res.data.data[0] }, // will be passed to the page component as props
+      props: { dataNew: data }, // will be passed to the page component as props
     };
   } else {
     return {
