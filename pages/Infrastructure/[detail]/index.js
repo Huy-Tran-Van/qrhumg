@@ -1,12 +1,12 @@
 import React from "react";
-import Banner from "../../components/Banner";
-import Menu from "../../components/Menu";
-import InfoDetail from "./InfoDetail";
+import Banner from "../../../components/Banner";
+import Menu from "../../../components/Menu";
+import InfoDetail from "../../InfrastructureDetail/InfoDetail";
 import axios from "axios"
-import { LOCALHOST_URL_API_STRAPI, URL_SERVER_WEB } from "../../ultis";
-import SEO from "../SEO/seo";
+import { LOCALHOST_URL_API_STRAPI, URL_SERVER_WEB } from "../../../ultis";
+import SEO from "../../SEO/seo";
 import { useRouter } from 'next/router'
-import StyledInfratructureDetail from "../../components/InfrastructureDetail/styled";
+import StyledInfratructureDetail from "../../../components/InfrastructureDetail/styled";
 
 const Detail = ({ dataNew }) => {
   return (
@@ -31,9 +31,12 @@ const Detail = ({ dataNew }) => {
 export default Detail;
 
 export async function getServerSideProps(context) {
-  const params = context.query.index;
+  // console.log("context", context);
+  const params = context.query.detail;
+  // console.log("paramsparamsparams", params);
   const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
   return {
+    // props : {}
     props: { dataNew: res.data.data[0] }, // will be passed to the page component as props
   };
 }
