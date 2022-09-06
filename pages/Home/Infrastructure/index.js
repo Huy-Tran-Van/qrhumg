@@ -37,7 +37,7 @@ const Intrastructure = () => {
         <Slider {...settings}>
           {dataNew && dataNew.length > 0 ? dataNew?.map((item, index) => (
             <div key={item.id}>
-              <Link href={`/InfrastructureDetail/${item?.attributes.slug}`} passHref>
+              <Link href={`/Infrastructure/${item?.attributes.slug}`} passHref>
                 <StyledIntrastructure.Item>
                   <StyledIntrastructure.Images
                     src={`${LOCALHOST_URL_API_STRAPI}${item?.attributes?.image?.data[0].attributes?.url}`}
