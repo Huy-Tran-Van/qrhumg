@@ -118,9 +118,12 @@ const News = () => {
               <StyledNews.NameKhoa>111</StyledNews.NameKhoa>
             </Link> */}
             {item?.attributes?.slug}
-            <Link href={`/Infrastructure/${item?.attributes?.slug}`}
+            <Link href={`/Infrastructure/${item?.attributes?.slug}`} as={`/co-so-vat-chat/${item?.attributes?.slug}`}
               passHref>
-              <StyledNews.TitleNews>{item.attributes?.Title}</StyledNews.TitleNews>
+              <a>
+                <StyledNews.TitleNews>{item.attributes?.Title}</StyledNews.TitleNews>
+
+              </a>
             </Link>
             <StyledNews.WrapperDay>
               <AiOutlineCalendar fontSize={20} />
