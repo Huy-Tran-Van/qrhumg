@@ -12,7 +12,7 @@ const Detail = ({ dataNew }) => {
   console.log("dataNew", dataNew);
   return (
     <>
-      <SEO
+      {/* <SEO
         title={dataNew?.attributes?.Title}
         urlKey={`${URL_SERVER_WEB}/InfrastructureDetail/${dataNew?.attributes?.slug}`}
         image={`${LOCALHOST_URL_API_STRAPI}/${dataNew?.attributes?.image?.data[0].attributes?.url}`}
@@ -20,7 +20,7 @@ const Detail = ({ dataNew }) => {
       // keyword={data?.keyword ?? ''}
       />
       <Banner />
-      <Menu />
+      <Menu /> */}
       <StyledInfratructureDetail.WrapperDetail>
         <InfoDetail dataNew={dataNew} />
       </StyledInfratructureDetail.WrapperDetail>
