@@ -3,7 +3,7 @@ import Banner from "../../components/Banner";
 import Menu from "../../components/Menu";
 import InfoDetail from "./InfoDetail";
 import axios from "axios"
-import { LOCALHOST_URL_API_STRAPI } from "../../ultis";
+import { LOCALHOST_URL_API_STRAPI, URL_SERVER_WEB } from "../../ultis";
 import SEO from "../SEO/seo";
 import { useRouter } from 'next/router'
 import StyledInfratructureDetail from "../../components/InfrastructureDetail/styled";
@@ -19,7 +19,7 @@ const Detail = ({ dataNew }) => {
     <>
       <SEO
         title={dataNew?.attributes?.Title}
-        // urlKey={`${hostname}/InfrastructureDetail/${dataNew?.attributes?.slug}`}
+        urlKey={`${URL_SERVER_WEB}/InfrastructureDetail/${dataNew?.attributes?.slug}`}
         image={`${LOCALHOST_URL_API_STRAPI}/${dataNew?.attributes?.image?.data[0].attributes?.url}`}
         content={dataNew?.attributes?.Content ?? 'humgqr'}
       // keyword={data?.keyword ?? ''}
@@ -36,11 +36,11 @@ const Detail = ({ dataNew }) => {
 
 export default Detail;
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const params = context.query.index;
   const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
   console.log("dataNew", res.data.data);
   return {
-    props: { dataNew: res.data.data[0]}, // will be passed to the page component as props
+    props: { dataNew: res.data.data[0] }, // will be passed to the page component as props
   };
 }
