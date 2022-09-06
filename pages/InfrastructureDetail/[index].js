@@ -21,7 +21,7 @@ const Detail = ({ dataNew }) => {
         title={dataNew?.attributes?.Title}
         // urlKey={`${hostname}/InfrastructureDetail/${dataNew?.attributes?.slug}`}
         image={`${LOCALHOST_URL_API_STRAPI}/${dataNew?.attributes?.image?.data[0].attributes?.url}`}
-        content={dataNew?.attributes?.Content ?? 'humg-qr'}
+        content={dataNew?.attributes?.Content ?? 'humgqr'}
       // keyword={data?.keyword ?? ''}
       />
       <Banner />
@@ -36,7 +36,7 @@ const Detail = ({ dataNew }) => {
 
 export default Detail;
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const params = context.query.index;
   const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
   console.log("dataNew", res.data.data);
