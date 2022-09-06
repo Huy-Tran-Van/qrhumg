@@ -36,7 +36,7 @@ const Detail = ({ dataNew }) => {
 
 export default Detail;
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const params = context.query.index;
   const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
   console.log("dataNew", res.data.data);
