@@ -118,7 +118,7 @@ const News = () => {
               <StyledNews.NameKhoa>111</StyledNews.NameKhoa>
             </Link> */}
             {item?.attributes?.slug}
-            <Link href={`/InfrastructureDetail/${item?.attributes?.slug}`}
+            <Link href={`/InfrastructureDetail/detail/${item?.attributes?.slug}`}
               passHref>
               <a>
                 <StyledNews.TitleNews>{item.attributes?.Title}</StyledNews.TitleNews>

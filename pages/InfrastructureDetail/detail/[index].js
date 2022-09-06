@@ -32,19 +32,20 @@ const Detail = ({ dataNew }) => {
 
 export default Detail;
 
-// export async function getStaticPaths() {
+export async function getStaticPaths() {
 
-//   // const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=su-hinh-thanh-cua-kim-cuong`)
-//   return {
-//     // props : {}
-//     paths: ['/Infrastructure/su-hinh-thanh-cua-kim-cuong-1'],
-//     fallback: true,
-//   };
-// }
+  // const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=su-hinh-thanh-cua-kim-cuong`)
+  return {
+    // props : {}
+    paths: ['/InfrastructureDetail/detail/su-hinh-thanh-cua-kim-cuong'],
+    fallback: true,
+  };
+}
 
 
-export async function getServerSideProps(context) {
-  const params = context.params.detail;
+export async function getStaticProps(context) {
+  console.log("context", context);
+  const params = context.params.index;
   const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
   
     return {
