@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "../../Component/Banner";
 import Menu from "../../Component/Menu";
-import InfoDetail from "../../InfrastructureDetail/InfoDetail";
+import InfoDetail from "../../InfrastructureDetail";
 import axios from "axios"
 import { LOCALHOST_URL_API_STRAPI, URL_SERVER_WEB } from "../../../ultis";
 import SEO from "../../SEO/seo";
