@@ -24,8 +24,7 @@ const Detail = ({ dataNew }) => {
         <StyledInfratructureDetail.WrapperDetail>
           <InfoDetail dataNew={dataNew} />
         </StyledInfratructureDetail.WrapperDetail>
-        {/* <div>huy</div> */}
-        </> : null}
+        {/* <div>huy</div> */}</> : null}
 
     </>
   );
