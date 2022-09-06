@@ -9,9 +9,10 @@ import { useRouter } from 'next/router'
 import StyledInfratructureDetail from "../../../components/InfrastructureDetail/styled";
 
 const Detail = ({ dataNew }) => {
+  console.log("dataNew", dataNew);
   return (
     <>
-      {/* <SEO
+      <SEO
         title={dataNew?.attributes?.Title}
         urlKey={`${URL_SERVER_WEB}/InfrastructureDetail/${dataNew?.attributes?.slug}`}
         image={`${LOCALHOST_URL_API_STRAPI}/${dataNew?.attributes?.image?.data[0].attributes?.url}`}
@@ -21,9 +22,9 @@ const Detail = ({ dataNew }) => {
       <Banner />
       <Menu />
       <StyledInfratructureDetail.WrapperDetail>
-       {dataNew ? <InfoDetail dataNew={dataNew} /> : null} 
-      </StyledInfratructureDetail.WrapperDetail> */}
-      <div>huy</div>
+        <InfoDetail dataNew={dataNew} />
+      </StyledInfratructureDetail.WrapperDetail>
+      {/* <div>huy</div> */}
     </>
   );
 };
@@ -35,7 +36,7 @@ export async function getStaticPaths() {
   // const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=su-hinh-thanh-cua-kim-cuong`)
   return {
     // props : {}
-    paths: ['/Infrastructure/su-hinh-thanh-cua-kim-cuong'],
+    paths: ['/Infrastructure/null'],
     fallback: true,
   };
 }
