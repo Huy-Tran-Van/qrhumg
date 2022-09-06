@@ -10,7 +10,7 @@ const InfoLeft = ({ dataNew }) => {
       <StyledInfoDetail.InfoLeft>
         <h1>{dataNew?.attributes?.Title}</h1>
         <ReactMarkdown>{dataNew?.attributes?.content}</ReactMarkdown>
-        <Share dataNew={dataNew} />
+        <Share dataNew={dataNew}/>
       </StyledInfoDetail.InfoLeft>
     </>
 
