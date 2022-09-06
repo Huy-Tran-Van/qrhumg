@@ -1,5 +1,5 @@
-import Banner from "../../components/Banner";
-import Menu from "../../components/Menu";
+import Banner from "../Component/Banner";
+import Menu from "../Component/Menu";
 import Department from "./Department";
 import Intrastructure from "./Infrastructure";
 import Video from "./Video";

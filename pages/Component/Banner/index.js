@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
-import { LOCALHOST_URL_API } from "../../ultis";
-import  BannerPage  from "./styled";
+import { LOCALHOST_URL_API } from "../../../ultis";
+import  BannerPage  from "../../../components/Banner/styled";
 
 const Banner = () => {
 

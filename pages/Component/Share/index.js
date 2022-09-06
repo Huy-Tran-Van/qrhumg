@@ -11,7 +11,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import QRCode from "qrcode.react";
-import { URL_SERVER_WEB } from "../../ultis";
+import { URL_SERVER_WEB } from "../../../ultis";
 
 
 const Share = ({ dataNew }) => {

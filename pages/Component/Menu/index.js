@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getDataMenu } from "../../redux/Menu/action";
-import MenuPage from "./styled";
+import { getDataMenu } from "../../../redux/Menu/action";
+import MenuPage from "../../../components/Menu/styled";
 import Link from "next/link";
 
 const Menu = () => {

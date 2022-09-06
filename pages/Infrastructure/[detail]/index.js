@@ -1,6 +1,6 @@
 import React from "react";
-import Banner from "../../../components/Banner";
-import Menu from "../../../components/Menu";
+import Banner from "../../Component/Banner";
+import Menu from "../../Component/Menu";
 import InfoDetail from "../../InfrastructureDetail/InfoDetail";
 import axios from "axios"
 import { LOCALHOST_URL_API_STRAPI, URL_SERVER_WEB } from "../../../ultis";
@@ -9,7 +9,6 @@ import { useRouter } from 'next/router'
 import StyledInfratructureDetail from "../../../components/InfrastructureDetail/styled";
 
 const Detail = ({ dataNew }) => {
-  console.log("dataNew", dataNew);
   return (
     <>
       <Banner />
@@ -38,7 +37,7 @@ export async function getStaticPaths() {
   // const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=su-hinh-thanh-cua-kim-cuong`)
   return {
     // props : {}
-    paths: ['/Infrastructure/1-2-3'],
+    paths: ['/Infrastructure/su-hinh-thanh-cua-kim-cuong-1'],
     fallback: true,
   };
 }
