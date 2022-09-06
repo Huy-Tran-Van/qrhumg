@@ -17,26 +17,26 @@ const Detail = ({ dataNew }) => {
   // }
   return (
     <>
-      {/* <SEO
+      <SEO
         title={dataNew?.attributes?.Title}
-        urlKey={`${hostname}/InfrastructureDetail/${dataNew?.attributes?.slug}`}
-        // image={`http://localhost:1337/${dataNew?.attributes?.image?.data[0].attributes?.url}`}
-        content={dataNew.attributes.Content ?? 'Drivadz'}
-      // keyword={data?.keyword ?? 'Drivadz'}
+        // urlKey={`${hostname}/InfrastructureDetail/${dataNew?.attributes?.slug}`}
+        image={`${LOCALHOST_URL_API_STRAPI}/${dataNew?.attributes?.image?.data[0].attributes?.url}`}
+        content={dataNew?.attributes?.Content ?? 'humgqr'}
+      // keyword={data?.keyword ?? ''}
       />
       <Banner />
       <Menu />
       <StyledInfratructureDetail.WrapperDetail>
         <InfoDetail dataNew={dataNew} />
-      </StyledInfratructureDetail.WrapperDetail> */}
-      <div>huy</div>
+      </StyledInfratructureDetail.WrapperDetail>
+      {/* <div>huy</div> */}
     </>
   );
 };
 
 export default Detail;
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const params = context.query.index;
   const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
   console.log("dataNew", res.data.data);

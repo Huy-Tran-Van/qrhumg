@@ -4,6 +4,7 @@ const StyledIntrastructure = {
   WrapperInTrastucture: styled.div`
     padding: 0 135px;
     text-align: center;
+    margin-bottom: 30px;
   `,
   Title: styled.span`
     font-weight: 700;
