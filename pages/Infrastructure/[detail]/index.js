@@ -9,6 +9,7 @@ import { useRouter } from 'next/router'
 import StyledInfratructureDetail from "../../../components/InfrastructureDetail/styled";
 
 const Detail = ({ dataNew }) => {
+  console.log("dataNew", dataNew);
   return (
     <>
       <SEO
@@ -30,9 +31,20 @@ const Detail = ({ dataNew }) => {
 
 export default Detail;
 
-export async function getServerSideProps(context) {
-  // console.log("context", context);
-  const params = context.query.detail;
+export async function getStaticPaths() {
+
+  // const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=su-hinh-thanh-cua-kim-cuong`)
+  return {
+    // props : {}
+    paths: ['/Infrastructure/su-hinh-thanh-cua-kim-cuong'],
+    fallback: true,
+  };
+}
+
+
+export async function getStaticProps(context) {
+  console.log("context", context);
+  const params = context.params.detail;
   // console.log("paramsparamsparams", params);
   const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
   return {
