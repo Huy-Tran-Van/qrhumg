@@ -5,7 +5,7 @@ const routers = [
   },
   {
     source: "/Infrastructure/[detail]",
-    destination: "/tin-tuc/[detail]",
+    destination: "/co-so-vat-chat/[detail]",
   },
 ];
 
