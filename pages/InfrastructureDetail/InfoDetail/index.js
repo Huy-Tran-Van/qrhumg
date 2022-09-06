@@ -2,7 +2,7 @@ import React from "react";
 import StyledInfoDetail from "../../../components/InfrastructureDetail/InfoDetail/styled";
 import { BsHeart } from "react-icons/bs";
 import ReactMarkdown from "react-markdown";
-import Share from "../../../components/Share";
+// import Share from "../../../components/Share";
 
 const InfoLeft = ({ dataNew }) => {
   return (
@@ -10,7 +10,7 @@ const InfoLeft = ({ dataNew }) => {
       <StyledInfoDetail.InfoLeft>
         <h1>{dataNew?.attributes?.Title}</h1>
         <ReactMarkdown>{dataNew?.attributes?.content}</ReactMarkdown>
-        <Share dataNew={dataNew}/>
+        {/* <Share dataNew={dataNew}/> */}
       </StyledInfoDetail.InfoLeft>
     </>
 
