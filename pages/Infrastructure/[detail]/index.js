@@ -12,19 +12,21 @@ const Detail = ({ dataNew }) => {
   console.log("dataNew", dataNew);
   return (
     <>
-      <SEO
+      <Banner />
+      <Menu />
+      {dataNew ? <><SEO
         title={dataNew?.attributes?.Title}
         urlKey={`${URL_SERVER_WEB}/InfrastructureDetail/${dataNew?.attributes?.slug}`}
         image={`${LOCALHOST_URL_API_STRAPI}/${dataNew?.attributes?.image?.data[0].attributes?.url}`}
         content={dataNew?.attributes?.Content ?? 'humgqr'}
       // keyword={data?.keyword ?? ''}
       />
-      <Banner />
-      <Menu />
-      <StyledInfratructureDetail.WrapperDetail>
-        <InfoDetail dataNew={dataNew} />
-      </StyledInfratructureDetail.WrapperDetail>
-      {/* <div>huy</div> */}
+
+        <StyledInfratructureDetail.WrapperDetail>
+          <InfoDetail dataNew={dataNew} />
+        </StyledInfratructureDetail.WrapperDetail>
+        {/* <div>huy</div> */}</> : null}
+
     </>
   );
 };
@@ -36,7 +38,7 @@ export async function getStaticPaths() {
   // const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=su-hinh-thanh-cua-kim-cuong`)
   return {
     // props : {}
-    paths: ['/Infrastructure/null'],
+    paths: ['/Infrastructure/1-2-3'],
     fallback: true,
   };
 }
@@ -47,8 +49,16 @@ export async function getStaticProps(context) {
   const params = context.params.detail;
   // console.log("paramsparamsparams", params);
   const res = await axios.get(`${LOCALHOST_URL_API_STRAPI}/api/news?populate=*&filters[slug]=${params}`)
-  return {
-    // props : {}
-    props: { dataNew: res.data.data[0] }, // will be passed to the page component as props
-  };
+  if (res) {
+    return {
+      // props : {}
+      props: { dataNew: res.data.data[0] }, // will be passed to the page component as props
+    };
+  } else {
+    return {
+      props: {}
+      // props: { dataNew: res.data.data[0] }, // will be passed to the page component as props
+    };
+  }
+
 }
